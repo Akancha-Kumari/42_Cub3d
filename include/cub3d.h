@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
+#include <unistd.h>
 
 #define WIDTH 800
 #define HEIGHT 600
@@ -18,11 +19,9 @@ typedef struct s_game
 	double player_pos_y;
 	double player_dir_x;
 	double player_dir_y;
-	double player_angel_x;
-	double player_angel_y;
+	double player_plane_x;
+	double player_plane_y;
+	char **map;
 } t_game;
-
-void init_graphics(t_game *game);
-void init_player(t_game *game, char **map);
 
 #endif
