@@ -6,7 +6,7 @@
 /*   By: ji-hong <ji-hong@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 20:06:31 by ji-hong           #+#    #+#             */
-/*   Updated: 2025/08/27 13:46:48 by ji-hong          ###   ########.fr       */
+/*   Updated: 2025/08/28 19:08:12 by ji-hong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,11 +109,11 @@ void	read_file(char *file, t_map *map)
 	init_map(map);
 	line = get_next_line(fd);
 	if (!line)
-		line_exit(map->arena, line, "no infor from the map");
+		line_exit(map->arena, line, "no info from the map");
 	read_line(fd, map, line);
 	close(fd);
 	if (!map->map_start)
-		line_exit(map->arena, line, "map missing");
+		arena_exit(map->arena, "map missing");
 	if (!map->map_end)
 		map->map_end = map->arena->memory + map->arena->offset - 1;
 }

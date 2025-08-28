@@ -6,12 +6,13 @@
 /*   By: ji-hong <ji-hong@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 19:47:51 by ji-hong           #+#    #+#             */
-/*   Updated: 2025/08/28 15:19:26 by ji-hong          ###   ########.fr       */
+/*   Updated: 2025/08/28 18:40:57 by ji-hong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/parse.h"
+#include "../include/cub3d.h"
 
+/*
 static void	init_player_dir(t_game *game, char c)
 {
 	if (c == 'N')
@@ -62,6 +63,7 @@ static void	ft_mlx(t_map *map)
 	mlx_loop(game.mlx);
 	mlx_terminate(game.mlx);
 }
+*/
 
 int	main(int argc, char **argv)
 {
@@ -70,6 +72,6 @@ int	main(int argc, char **argv)
 	if (argc != 2)
 		error_exit("Input: ./cub3D mapfile");
 	parse_map(argv[1], &map);
-	ft_mlx(&map);
+//	ft_mlx(&map);
 	arena_destroy(map.arena);
 }

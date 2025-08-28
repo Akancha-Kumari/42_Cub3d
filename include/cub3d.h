@@ -1,7 +1,7 @@
 #ifndef CUB3D_H
 # define CUB3D_H
 
-# include "MLX42/MLX42.h"
+//# include "MLX42/MLX42.h"
 # include "parse.h"
 # include <math.h>
 # include <string.h>
@@ -13,6 +13,7 @@
 // They have been included in other header files.
 // If there is an issue, then add the necessary ones plz
 
+/*
 typedef struct s_game
 {
 	mlx_t		*mlx;
@@ -26,6 +27,8 @@ typedef struct s_game
 	char		**map;
 	t_arena		*arena;
 }	t_game;
+*/
+
 // I have added arena to your struct.
 // If you need to exit the program you need to use arena_exit function.
 // arena_exit(game->arena, "your error exit message");

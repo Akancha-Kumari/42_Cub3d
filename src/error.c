@@ -6,11 +6,11 @@
 /*   By: ji-hong <ji-hong@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 13:03:18 by ji-hong           #+#    #+#             */
-/*   Updated: 2025/08/27 13:40:17 by ji-hong          ###   ########.fr       */
+/*   Updated: 2025/08/28 18:41:32 by ji-hong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/parse.h"
+#include "../include/parse.h"
 
 void	error_exit(char *error_msg)
 {
