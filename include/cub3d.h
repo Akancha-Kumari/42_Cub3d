@@ -10,6 +10,8 @@
 
 #define WIDTH 800
 #define HEIGHT 600
+#define MOVE_SPEED 0.1
+#define ROT_SPEED 0.05
 
 typedef struct s_game
 {
@@ -21,7 +23,12 @@ typedef struct s_game
 	double player_dir_y;
 	double player_plane_x;
 	double player_plane_y;
-	char **map;
+	char **map; // map_grid
+
+	mlx_texture_t *tex_north;
+	mlx_texture_t *tex_south;
+	mlx_texture_t *tex_east;
+	mlx_texture_t *tex_west;
 } t_game;
 
 #endif
