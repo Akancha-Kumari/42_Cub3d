@@ -9,7 +9,7 @@ MLX_REPO := https://github.com/codam-coding-college/MLX42.git
 HEADERS	:= -I ./include -I $(LIBMLX)/include -I/opt/homebrew/opt/glfw/include
 LIBS	:= $(LIBMLX)/build/libmlx42.a -L/opt/homebrew/opt/glfw/lib -lglfw -ldl -pthread -lm
 
-SRCS	:= ./src/cube.c
+SRCS	:= ./src/cube.c ./src/error.c ./src/init.c ./src/key.c ./src/render.c ./src/free.c
 OBJDIR	:= obj
 
 OBJS	:= $(patsubst ./src/%.c,$(OBJDIR)/%.o,$(SRCS))
