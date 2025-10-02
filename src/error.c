@@ -1,26 +1,38 @@
-#include "../include/parse.h"
-#include "../include/game.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   error.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/02 14:38:08 by akumari           #+#    #+#             */
+/*   Updated: 2025/10/02 14:38:10 by akumari          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void error_exit(char *error_msg)
+#include "../include/game.h"
+#include "../include/parse.h"
+
+void	error_exit(char *error_msg)
 {
 	printf("Error\n%s\n", error_msg);
 	exit(EXIT_FAILURE);
 }
 
-void line_exit(t_arena *arena, char *line, char *error_msg)
+void	line_exit(t_arena *arena, char *line, char *error_msg)
 {
 	free(line);
 	arena_destroy(arena);
 	error_exit(error_msg);
 }
 
-void arena_exit(t_arena *arena, char *error_msg)
+void	arena_exit(t_arena *arena, char *error_msg)
 {
 	arena_destroy(arena);
 	error_exit(error_msg);
 }
 
-void cleanup_game(t_game *game)
+void	cleanup_game(t_game *game)
 {
 	if (game->tex_north)
 		mlx_delete_texture(game->tex_north);

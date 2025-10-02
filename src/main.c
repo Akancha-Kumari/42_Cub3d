@@ -1,33 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/02 14:38:17 by akumari           #+#    #+#             */
+/*   Updated: 2025/10/02 14:42:24 by akumari          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/cub3d.h"
 #include "../include/game.h"
 
-int main(int argc, char **argv)
+// <-- store map pointer in game for colors/textures
+int	main(int argc, char **argv)
 {
-	t_game game;
-	t_map map;
+	t_game	game;
+	t_map	map;
 
 	ft_memset(&game, 0, sizeof(t_game));
 	ft_memset(&map, 0, sizeof(t_map));
-
 	if (argc != 2)
 		error_exit("Usage: ./cub3D mapfile");
-
 	parse_map(argv[1], &map);
-
 	game.map = map.map_grid;
-	game.map_struct = &map; // <-- store map pointer in game for colors/textures
-
+	game.map_struct = &map;
 	init_player(&game);
 	init_graphics(&game);
 	init_textures(&game, &map);
-
 	mlx_loop_hook(game.mlx, render_frame, &game);
 	mlx_key_hook(game.mlx, key_hook, &game);
 	mlx_loop(game.mlx);
-
 	cleanup_game(&game);
 	arena_destroy(map.arena);
-	return 0;
+	return (0);
 }
 
 // int main(int argc, char **argv)

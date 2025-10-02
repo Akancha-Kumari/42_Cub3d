@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_read.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ji-hong <ji-hong@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 20:06:31 by ji-hong           #+#    #+#             */
-/*   Updated: 2025/09/09 20:17:40 by ji-hong          ###   ########.fr       */
+/*   Updated: 2025/10/02 15:50:05 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	get_player_info(t_map *map, char *line)
 	while (line[i])
 	{
 		if (line[i] == '0' || line[i] == '1' || line[i] == ' ')
-			i ++;
+			i++;
 		else if (line[i] == 'N' || line[i] == 'S' || line[i] == 'E'
 			|| line[i] == 'W')
 		{
@@ -46,7 +46,7 @@ static int	get_player_info(t_map *map, char *line)
 			}
 			else
 				line_exit(map->arena, line, "multiple players");
-			i ++;
+			i++;
 		}
 		else
 			line_exit(map->arena, line, "invalid map element");
@@ -56,8 +56,7 @@ static int	get_player_info(t_map *map, char *line)
 
 void	chk_map(t_map *map, char *line)
 {
-	int		i;
-//	char	*s;
+	int	i;
 
 	trim_rear(line);
 	if (!line[0])
@@ -74,17 +73,12 @@ void	chk_map(t_map *map, char *line)
 	}
 	else
 	{
-		if(!arena_strdup(map->arena, line))
+		if (!arena_strdup(map->arena, line))
 			line_exit(map->arena, line, "memory allocation failed");
-/*
-		s = arena_strdup(map->arena, line);
-		if (!map->map_start)
-			line_exit(map->arena, line, "memory allocation failed");
-*/
 	}
 	if (i > map->w)
 		map->w = i;
-	map->h ++;
+	map->h++;
 }
 
 static void	read_line(int fd, t_map *map, char *line)
