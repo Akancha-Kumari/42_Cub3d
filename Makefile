@@ -1,7 +1,7 @@
 NAME    := cub3D
 
 CC      := cc
-CFLAGS  := -Wall -Wextra -Werror -g
+CFLAGS  := -Wall -Wextra -Werror
 
 # === Directories ===
 LIBMLX  := ./MLX42
@@ -13,8 +13,7 @@ HEADERS := -I ./include -I ./src/arena -I ./get_next_line \
            -I $(LIBMLX)/include -I libft -I/opt/homebrew/opt/glfw/include
 
 # === Libs ===
-LIBS    := $(LIBMLX)/build/libmlx42.a libft/libft.a \
-           -L/opt/homebrew/opt/glfw/lib -lglfw -ldl -pthread -lm
+LIBS    := $(LIBMLX)/build/libmlx42.a libft/libft.a -ldl -lglfw -pthread -lm
 
 # === Sources ===
 SRCS := src/arena/arena.c src/error.c src/main.c\
