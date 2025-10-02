@@ -6,11 +6,11 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 15:36:34 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 15:36:54 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/02 16:48:42 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/game.h"
+#include "../include/cub3d.h"
 
 static void	init_ray_dir(t_game *game, t_ray *ray, int x)
 {

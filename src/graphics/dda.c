@@ -6,11 +6,11 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 15:42:42 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 15:43:09 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/02 16:48:53 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/game.h"
+#include "../include/cub3d.h"
 
 static void	dda_loop(t_game *game, t_ray *ray)
 {

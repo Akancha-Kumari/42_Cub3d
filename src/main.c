@@ -6,12 +6,11 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:38:17 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 14:42:24 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/02 16:48:18 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/cub3d.h"
-#include "../include/game.h"
 
 // <-- store map pointer in game for colors/textures
 int	main(int argc, char **argv)

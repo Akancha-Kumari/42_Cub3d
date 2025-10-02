@@ -6,11 +6,11 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:48:33 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 14:51:32 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/02 16:48:26 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/game.h"
+#include "../include/cub3d.h"
 
 // Handles north/south directions
 static void	set_player_dir_ns(t_game *game, char c)

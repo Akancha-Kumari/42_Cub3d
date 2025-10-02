@@ -6,11 +6,11 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 15:48:05 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 16:30:12 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/02 16:48:49 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/game.h"
+#include "../include/cub3d.h"
 
 static uint32_t	fix_color(uint32_t color)
 {

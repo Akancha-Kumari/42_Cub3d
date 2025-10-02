@@ -59,6 +59,7 @@
   "files.associations": {
     "game.h": "c",
     "test": "c",
-    "cstdint": "c"
+    "cstdint": "c",
+    "math.h": "c"
   }
 }

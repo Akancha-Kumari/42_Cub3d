@@ -6,11 +6,11 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:37:38 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 15:53:41 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/02 16:48:29 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/game.h"
+#include "../include/cub3d.h"
 
 // Pack RGB into uint32_t (R << 24 | G << 16 | B << 8 | A)
 static uint32_t	rgb_to_uint32(uint8_t r, uint8_t g, uint8_t b)

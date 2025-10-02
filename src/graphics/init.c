@@ -6,11 +6,11 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:37:04 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 14:54:21 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/02 16:48:39 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/game.h"
+#include "../include/cub3d.h"
 
 void	init_player(t_game *game)
 {

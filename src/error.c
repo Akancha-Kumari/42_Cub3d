@@ -6,11 +6,11 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:38:08 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 14:38:10 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/02 16:48:10 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/game.h"
+#include "../include/cub3d.h"
 #include "../include/parse.h"
 
 void	error_exit(char *error_msg)
