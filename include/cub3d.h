@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:38:54 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 16:47:23 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/02 17:59:06 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,5 +107,6 @@ void				init_player(t_game *game);
 void				key_hook(mlx_key_data_t keydata, void *param);
 void				render_frame(void *param);
 void				cleanup_game(t_game *game);
+void				error_exit_graphic(char *msg, t_game *game, t_map *map);
 
 #endif

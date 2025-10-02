@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:38:17 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 16:48:18 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/02 17:58:10 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	main(int argc, char **argv)
 	if (argc != 2)
 		error_exit("Usage: ./cub3D mapfile");
 	parse_map(argv[1], &map);
+	if (!map.map_grid)
+		error_exit("Failed to parse map.");
 	game.map = map.map_grid;
 	game.map_struct = &map;
 	init_player(&game);
@@ -32,7 +34,8 @@ int	main(int argc, char **argv)
 	mlx_key_hook(game.mlx, key_hook, &game);
 	mlx_loop(game.mlx);
 	cleanup_game(&game);
-	arena_destroy(map.arena);
+	if (map.arena)
+		arena_destroy(map.arena);
 	return (0);
 }
 

@@ -1,7 +1,7 @@
 NAME    := cub3D
 
 CC      := cc
-CFLAGS  := -Wall -Wextra -Werror
+CFLAGS  := -Wall -Wextra -Werror -g
 
 # === Directories ===
 LIBMLX  := ./MLX42
@@ -16,7 +16,7 @@ HEADERS := -I ./include -I ./src/arena -I ./get_next_line \
 LIBS    := $(LIBMLX)/build/libmlx42.a libft/libft.a -ldl -lglfw -pthread -lm
 
 # === Sources ===
-SRCS := src/arena/arena.c src/error.c src/main.c\
+SRCS := src/arena/arena.c src/error.c src/cleanup.c src/main.c\
         get_next_line/get_next_line.c \
         src/parse/parse_map.c src/parse/parse_read.c src/parse/parse_texture.c src/parse/parse_util.c \
         src/graphics/init.c src/graphics/set.c src/graphics/key.c src/graphics/render.c src/graphics/init_ray.c \

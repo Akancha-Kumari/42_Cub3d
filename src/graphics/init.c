@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:37:04 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 17:23:37 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/02 17:57:21 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,5 @@ void	init_textures(t_game *game, t_map *map)
 	game->tex_west = mlx_load_png(map->we);
 	if (!game->tex_north || !game->tex_south || !game->tex_east
 		|| !game->tex_west)
-		error_exit("Failed to load textures from map file.");
+		error_exit_graphic("Failed to load textures from map file.", game, map);
 }
