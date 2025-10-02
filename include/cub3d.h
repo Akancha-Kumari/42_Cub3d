@@ -1,13 +1,12 @@
 #ifndef CUB3D_H
-# define CUB3D_H
+#define CUB3D_H
 
-//# include "MLX42/MLX42.h"
-# include "parse.h"
-# include <math.h>
-# include <string.h>
+#include "parse.h"
+#include <math.h>
+#include <string.h>
 
-# define WIDTH 800
-# define HEIGHT 600
+#define WIDTH 800
+#define HEIGHT 600
 
 // I took out some header files.
 // They have been included in other header files.
