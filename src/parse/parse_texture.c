@@ -6,7 +6,7 @@
 /*   By: ji-hong <ji-hong@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 18:43:46 by ji-hong           #+#    #+#             */
-/*   Updated: 2025/08/27 14:33:13 by ji-hong          ###   ########.fr       */
+/*   Updated: 2025/10/03 15:32:56 by ji-hong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,7 @@ static void	get_color(t_map *map, char *line, char *s, char c)
 				line_exit(map->arena, line, "color info error");
 			s ++;
 		}
+		s = trim_front(s);
 		i ++;
 	}
 	if (*s)

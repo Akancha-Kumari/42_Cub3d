@@ -6,7 +6,7 @@
 /*   By: ji-hong <ji-hong@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 19:47:51 by ji-hong           #+#    #+#             */
-/*   Updated: 2025/08/27 14:44:45 by ji-hong          ###   ########.fr       */
+/*   Updated: 2025/10/03 15:57:17 by ji-hong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,16 +72,15 @@ static void	print_result(t_map *map)
 {
 	int	i;
 
-	printf("texture\n%s\n%s\n%s\n%s\n", map->no, map->so, map->we, map->ea);
-	printf("fcolor: %d, %d, %d\nccolor: %d %d %d\n", map->f[0], map->f[1],
-		map->f[2], map->c[0], map->c[1], map->c[2]);
+	printf("NO %s\nSO %s\nWE %s\nEA %s\n", map->no, map->so, map->we, map->ea);
+	printf("C %d, %d, %d\nF %d, %d, %d\n", map->c[0], map->c[1],
+		map->c[2], map->f[0], map->f[1], map->f[2]);
 	i = 0;
 	while (map->map_grid[i])
 	{
 		printf("%s\n", map->map_grid[i]);
 		i ++;
 	}
-	printf ("%d %d %c\n", map->player_x, map->player_y, map->player_dir);
 }
 
 void	parse_map(char *file, t_map *map)

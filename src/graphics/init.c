@@ -41,7 +41,7 @@ void	init_player(t_game *game)
 
 void	init_graphics(t_game *game)
 {
-	game->mlx = mlx_init(WIDTH, HEIGHT, "Cub3d", true);
+	game->mlx = mlx_init(WIDTH, HEIGHT, "Cub3d", false);
 	if (!game->mlx)
 		error_exit("Failed to initialize MLX.");
 	game->img = mlx_new_image(game->mlx, WIDTH, HEIGHT);

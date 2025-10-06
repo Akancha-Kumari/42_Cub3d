@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:37:38 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 16:48:29 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/03 18:32:17 by ji-hong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // Pack RGB into uint32_t (R << 24 | G << 16 | B << 8 | A)
 static uint32_t	rgb_to_uint32(uint8_t r, uint8_t g, uint8_t b)
 {
-	return ((r << 24) | (g << 16) | (b << 8) | 0xFF);
+	return ((0xFF << 24) | (b << 16) | (g << 8) | r);
 }
 
 static void	fill_ceiling_floor(t_game *game, t_map *map)
@@ -48,12 +48,12 @@ static mlx_texture_t	*select_texture(t_game *game, t_ray *ray)
 	if (ray->side == 0)
 	{
 		if (ray->ray_dir_x > 0)
-			return (game->tex_west);
-		return (game->tex_east);
+			return (game->tex_east);
+		return (game->tex_west);
 	}
 	if (ray->ray_dir_y > 0)
-		return (game->tex_north);
-	return (game->tex_south);
+		return (game->tex_south);
+	return (game->tex_north);
 }
 
 // Pass map for colors

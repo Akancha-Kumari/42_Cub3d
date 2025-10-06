@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 15:48:05 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/02 16:48:49 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/03 20:19:26 by ji-hong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ static uint32_t	fix_color(uint32_t color)
 	uint8_t	r;
 	uint8_t	a;
 
-	b = (color >> 0) & 0xFF;
-	g = (color >> 8) & 0xFF;
-	r = (color >> 16) & 0xFF;
-	a = (color >> 24) & 0xFF;
+	a = (color >> 0) & 0xFF;
+	b = (color >> 8) & 0xFF;
+	g = (color >> 16) & 0xFF;
+	r = (color >> 24) & 0xFF;
 	if (a == 0)
 		a = 0xFF;
-	return ((r << 24) | (g << 16) | (b << 8) | a);
+	return (a << 24 | b << 16 | g << 8 | r);
 }
 
 static void	draw_vertical(t_game *game, int x, t_line_info *line)
