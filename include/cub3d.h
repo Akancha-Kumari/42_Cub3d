@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:38:54 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/06 16:27:01 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/06 17:54:52 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,16 @@
 # define MOVE_SPEED 0.1
 # define ROT_SPEED 0.05
 
+typedef struct s_input
+{
+	int				w;
+	int				a;
+	int				s;
+	int				d;
+	int				left;
+	int				right;
+}					t_input;
+
 typedef struct s_game
 {
 	mlx_t			*mlx;
@@ -42,6 +52,7 @@ typedef struct s_game
 	mlx_texture_t	*tex_south;
 	mlx_texture_t	*tex_east;
 	mlx_texture_t	*tex_west;
+	t_input			input;
 }					t_game;
 
 typedef struct s_ray
@@ -105,6 +116,7 @@ void				init_graphics(t_game *game);
 void				init_player(t_game *game);
 
 void				key_hook(mlx_key_data_t keydata, void *param);
+void				process_movement(t_game *game);
 void				render_frame(void *param);
 void				cleanup_game(t_game *game);
 void				error_exit_graphic(char *msg, t_game *game, t_map *map);

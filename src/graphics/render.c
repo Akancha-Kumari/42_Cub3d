@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:37:38 by akumari           #+#    #+#             */
-/*   Updated: 2025/10/06 16:27:20 by akumari          ###   ########.fr       */
+/*   Updated: 2025/10/06 18:14:00 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void	render_frame(void *param)
 	int				x;
 
 	game = param;
+	process_movement(game);
 	fill_ceiling_floor(game, game->map_struct);
 	x = 0;
 	while (x < WIDTH)
