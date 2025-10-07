@@ -1,7 +1,7 @@
 NAME    := cub3D
 
 CC      := cc
-CFLAGS  := -Wall -Wextra -Werror -g
+CFLAGS  := -Wall -Wextra -Werror
 
 # === Directories ===
 LIBMLX  := ./MLX42

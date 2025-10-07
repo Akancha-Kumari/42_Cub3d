@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../include/cub3d.h"
-#include "../include/parse.h"
 
 void	error_exit(char *error_msg)
 {

@@ -16,10 +16,6 @@
 # include "MLX42/MLX42.h"
 # include "parse.h"
 # include <math.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
 
 # define WIDTH 1280
 # define HEIGHT 960
